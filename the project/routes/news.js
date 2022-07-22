@@ -16,12 +16,12 @@ router.post('/post',async(req, res)=>{
     console.log(error)
 
     if(error)return res.status(400).send(error.message);
-    let news= new New(_.pick(req.body, ['title','new','author']));
+    let news= new New(_.pick(req.body, ['new','author']));
     await news.save();
-    res.status(200).send(_.pick(news,['title','new','author'])); 
+    res.status(200).send(_.pick(news,['new','author'])); 
 });
 
-router.post('/upload', function(req, res) {
+router.post('/uploadimg', function(req, res) {
   let sampleFile;
   let uploadPath;
   if (!req.files || Object.keys(req.files).length === 0) {
