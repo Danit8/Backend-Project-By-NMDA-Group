@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "e7f7e31a-fd07-430c-b0b5-699d3b739fb1",
+		"name": "nmda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"13731373\",\r\n    \"email\":\"amir136254310@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{server}}:{{port}}/api/users/login/"
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"amir163392\",\r\n    \"password\":\"13731373\",\r\n    \"email\":\"amir136254310@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{server}}:{{port}}/api/users/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
